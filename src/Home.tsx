@@ -1,30 +1,11 @@
 import * as React from "react"
-import {
-  chakra,
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  Heading,
-  Flex,
-  Button,
-  HStack,
-  PopoverTrigger,
-  Popover,
-  PopoverContent,
-  PopoverArrow,
-  PopoverCloseButton,
-  PopoverHeader, PopoverBody, useToast,
-} from "@chakra-ui/react"
+import { useEffect, useState } from "react"
+import { Box, Button, chakra, Grid, Heading, HStack, Text, useToast, VStack, } from "@chakra-ui/react"
 import { ColorModeSwitcher } from "./ColorModeSwitcher"
 import { Logo } from "./Logo"
 import googlePlay from "./assets/google-play.png"
 import appStore from "./assets/app-store.svg"
 import MobileDetect from "mobile-detect"
-import { useEffect, useState } from "react";
 import axios from "axios";
 
 interface Version {
@@ -54,7 +35,7 @@ export const HomePage = () => {
         setIOSVersion(res.data)
       })
     }
-  }, [])
+  }, [isAndroid, isIOS])
 
   return <Box textAlign="center" fontSize="xl" height='100%'>
     <Grid minH="100%" p={3}>
