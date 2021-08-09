@@ -25,13 +25,13 @@ export const HomePage = () => {
 
   useEffect(() => {
     if (!isIOS) {
-      axios.get<Version>('https://s3.jcloud.sjtu.edu.cn/9fd44bb76f604e8597acfcceada7cb83-tongqu/treehole/android/version.json').then((res) => {
+      axios.get<Version>(`https://s3.jcloud.sjtu.edu.cn/9fd44bb76f604e8597acfcceada7cb83-tongqu/treehole/android/version.json?nonce=${Date.now()}`).then((res) => {
         setAndroidVersion(res.data)
       })
     }
 
     if (!isAndroid) {
-      axios.get<Version>('https://s3.jcloud.sjtu.edu.cn/9fd44bb76f604e8597acfcceada7cb83-tongqu/treehole/ios/version.json').then((res) => {
+      axios.get<Version>(`https://s3.jcloud.sjtu.edu.cn/9fd44bb76f604e8597acfcceada7cb83-tongqu/treehole/ios/version.json?nonce=${Date.now()}`).then((res) => {
         setIOSVersion(res.data)
       })
     }
