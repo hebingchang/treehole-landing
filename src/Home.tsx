@@ -50,7 +50,7 @@ export const HomePage = () => {
         </Text>
         <HStack alignItems='normal' spacing={8}>
           {!isAndroid && <Box pt='10px'>
-            <chakra.img src={appStore} onClick={() => window.location.href = iOSVersion!.file} />
+            <chakra.img src={appStore} onClick={() => window.location.href = iOSVersion!.file} cursor='pointer' />
             <Text fontSize={13} color='grey' mt={2}>当前版本: {iOSVersion?.version}+{iOSVersion?.build}</Text>
           </Box>}
           {!isIOS && <Box>
@@ -59,7 +59,7 @@ export const HomePage = () => {
               status: "warning",
               duration: 3000,
               isClosable: true,
-            })} />
+            })} cursor='pointer' />
             <Text fontSize={14}>或<Button variant='link' fontSize={14}
                                          onClick={() => window.open(androidVersion?.file)}>直接下载 APK</Button></Text>
             <Text fontSize={13} color='grey' mt={2}>当前版本: {androidVersion?.version}+{androidVersion?.build}</Text>
