@@ -4,7 +4,7 @@ import { Box, Button, chakra, Grid, Heading, HStack, Text, useToast, VStack, } f
 import { ColorModeSwitcher } from "./ColorModeSwitcher"
 import { Logo } from "./Logo"
 import googlePlay from "./assets/google-play.png"
-import appStore from "./assets/app-store.svg"
+import testflight from "./assets/testflight.png"
 import MobileDetect from "mobile-detect"
 import axios from "axios";
 
@@ -49,8 +49,8 @@ export const HomePage = () => {
           又一个交大树洞
         </Text>
         <HStack alignItems='normal' spacing={8}>
-          {!isAndroid && <Box pt='10px'>
-            <chakra.img src={appStore} onClick={() => window.location.href = iOSVersion!.file} cursor='pointer' />
+          {!isAndroid && <Box>
+            <chakra.img src={testflight} height='60px' onClick={() => window.location.href = iOSVersion!.file} cursor='pointer' />
             <Text fontSize={13} color='grey' mt={2}>当前版本: {iOSVersion?.version}+{iOSVersion?.build}</Text>
           </Box>}
           {!isIOS && <Box>
