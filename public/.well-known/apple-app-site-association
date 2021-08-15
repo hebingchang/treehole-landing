@@ -1,0 +1,12 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "58EG9BNEH6.com.dyweb.treehole",
+                "paths": [ "/thread/*" ]
+            }
+        ]
+    }
+}
+
