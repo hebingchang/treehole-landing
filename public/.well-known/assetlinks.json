@@ -5,7 +5,7 @@
     ],
     "target": {
       "namespace": "android_app",
-      "package_name": "com.dyweb.treehole",
+      "package_name": "com.dongyueweb.treehole",
       "sha256_cert_fingerprints": [
         "91:E4:6A:C9:8C:6B:87:EC:E8:EE:C5:85:DE:ED:FE:6C:21:77:F3:B8:EE:22:36:33:67:8C:33:8A:FC:5F:F2:FB"
       ]
