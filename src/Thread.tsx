@@ -7,7 +7,7 @@ export const ThreadPage = () => {
   let { id, floor } = useParams();
 
   useEffect(() => {
-    window.open(floor ? `treehole://thread/${id}/${floor}` : `treehole://thread/${id}`)
+    window.location.href = floor ? `treehole://thread/${id}/${floor}` : `treehole://thread/${id}`
   }, [id, floor])
 
   return <Box textAlign="center" fontSize="xl" height='100%'>
