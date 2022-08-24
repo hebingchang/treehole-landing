@@ -3,6 +3,7 @@ import { ChakraProvider, theme, } from "@chakra-ui/react"
 import { HomePage } from "./Home";
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import { GuidePage } from "./Guide";
+import { ClassTablePage } from "./Classtable";
 import { ThreadPage } from "./Thread";
 
 export const App = () => {
@@ -17,6 +18,9 @@ export const App = () => {
         </Route>
         <Route path="/guide">
           <GuidePage />
+        </Route>
+        <Route path="/classtable">
+          <ClassTablePage />
         </Route>
       </Switch>
     </Router>
